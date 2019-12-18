@@ -8,31 +8,38 @@ import Signup from "./containers/Signup";
 import NewNote from "./containers/NewNote";
 import Notes from "./containers/Notes";
 import Settings from "./containers/Settings";
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
+import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 
 const Routes = ({ appProps }) => {
   return (
     <Switch>
       <AppliedRoute path="/" exact component={Home} appProps={appProps} />
-      <AppliedRoute path="/login" exact component={Login} appProps={appProps} />
-      <AppliedRoute
+      <UnauthenticatedRoute
+        path="/login"
+        exact
+        component={Login}
+        appProps={appProps}
+      />
+      <UnauthenticatedRoute
         path="/signup"
         exact
         component={Signup}
         appProps={appProps}
       />
-      <AppliedRoute
+      <AuthenticatedRoute
         path="/settings"
         exact
         component={Settings}
         appProps={appProps}
       />
-      <AppliedRoute
+      <AuthenticatedRoute
         path="/notes/new"
         exact
         component={NewNote}
         appProps={appProps}
       />
-      <AppliedRoute
+      <AuthenticatedRoute
         path="/notes/:id"
         exact
         component={Notes}
