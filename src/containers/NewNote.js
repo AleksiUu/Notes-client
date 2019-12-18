@@ -3,7 +3,7 @@ import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { API } from "aws-amplify";
 import LoaderButton from "../components/LoaderButton";
 import config from "../config";
-import { s3Upload } from "../libs/awsLib";
+import { S3Upload } from "../libs/awsLib";
 import "./NewNote.css";
 
 const NewNote = props => {
@@ -33,7 +33,7 @@ const NewNote = props => {
     setIsLoading(true);
 
     try {
-      const attachment = file.current ? await s3Upload(file.current) : null;
+      const attachment = file.current ? await S3Upload(file.current) : null;
 
       await createNote({ content, attachment });
       props.history.push("/");
@@ -44,7 +44,7 @@ const NewNote = props => {
   };
 
   const createNote = note => {
-    return API.post("notes", "/notes", {
+    return API.post("notes", "/notes/", {
       body: note
     });
   };
