@@ -6,6 +6,7 @@ import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import NewNote from "./containers/NewNote";
+import Notes from "./containers/Notes";
 
 const Routes = ({ appProps }) => {
   return (
@@ -22,6 +23,12 @@ const Routes = ({ appProps }) => {
         path="/notes/new"
         exact
         component={NewNote}
+        appProps={appProps}
+      />
+      <AppliedRoute
+        path="/notes/:id"
+        exact
+        component={Notes}
         appProps={appProps}
       />
       <Route component={NotFound} />

@@ -44,7 +44,7 @@ const NewNote = props => {
   };
 
   const createNote = note => {
-    return API.post("notes", "/notes/", {
+    return API.post("notes", "/notes", {
       body: note
     });
   };

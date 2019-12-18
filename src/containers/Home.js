@@ -28,7 +28,7 @@ const Home = props => {
   }, [props.isAuthenticated]);
 
   const loadNotes = () => {
-    return API.get("notes", "/notes/");
+    return API.get("notes", "/notes");
   };
 
   const renderNotesList = notes => {
