@@ -7,6 +7,7 @@ import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import NewNote from "./containers/NewNote";
 import Notes from "./containers/Notes";
+import Settings from "./containers/Settings";
 
 const Routes = ({ appProps }) => {
   return (
@@ -17,6 +18,12 @@ const Routes = ({ appProps }) => {
         path="/signup"
         exact
         component={Signup}
+        appProps={appProps}
+      />
+      <AppliedRoute
+        path="/settings"
+        exact
+        component={Settings}
         appProps={appProps}
       />
       <AppliedRoute
