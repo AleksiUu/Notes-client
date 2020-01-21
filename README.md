@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Client for Notes application
+Live demo can be found in: https://aleksiuusitalo.com/
 
 ## Available Scripts
 
