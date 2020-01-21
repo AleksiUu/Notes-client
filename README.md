@@ -1,5 +1,5 @@
 # Client for Notes application
-Live demo can be found in: https://expensify-aleksi.herokuapp.com/
+Live demo can be found in: https://aleksiuusitalo.com/
 
 ## Available Scripts
 
